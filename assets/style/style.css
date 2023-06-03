@@ -8,3 +8,22 @@
 li{
   list-style: none;
 }
+
+main{
+  height: 50vh;
+  border-bottom-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+  background-color: #C4C4C4;
+}
+
+.search-responsive{
+  @media (min-width: 768px) {
+      width: 50%;
+  }
+}
+
+.btn-responsive{
+  @media (min-width: 768px) {
+      width: 10rem;
+  }
+}
