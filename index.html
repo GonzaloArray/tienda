@@ -1,351 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tienda Deportiva</title>
-
+    <title>Tienda BA</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="./assets/style/style.css" />
-
-    <!-- Link font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;700&display=swap"
       rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <nav class="navbar p-2" style="background-color: #c4c4c4">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">INWOOD</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+    <div class="wrapper">
+      <header class="header-mobile">
+        <h1 class="logo">Tienda BA</h1>
+        <button class="open-menu" id="open-menu">
+          <i class="bi bi-list"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </header>
+      <aside>
+        <button class="close-menu" id="close-menu">
+          <i class="bi bi-x"></i>
+        </button>
+        <header>
+          <h1 class="logo">Tienda BA</h1>
+        </header>
+        <nav>
+          <ul class="menu">
+            <li>
+              <button id="todos" class="boton-menu boton-categoria active">
+                <i class="bi bi-hand-index-thumb-fill"></i> Todos los productos
+              </button>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+            <li>
+              <button id="abrigos" class="boton-menu boton-categoria">
+                <i class="bi bi-hand-index-thumb"></i> Abrigos
+              </button>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+            <li>
+              <button id="camisetas" class="boton-menu boton-categoria">
+                <i class="bi bi-hand-index-thumb"></i> Camisetas
+              </button>
+            </li>
+            <li>
+              <button id="pantalones" class="boton-menu boton-categoria">
+                <i class="bi bi-hand-index-thumb"></i> Pantalones
+              </button>
+            </li>
+            <li>
+              <a class="boton-menu boton-carrito" href="./carrito.html">
+                <i class="bi bi-cart-fill"></i> Carrito
+                <span id="numerito" class="numerito">0</span>
+              </a>
             </li>
           </ul>
+        </nav>
+        <footer>
+          <p class="texto-footer">© 2023 Tienda BA</p>
+        </footer>
+      </aside>
+      <main>
+        <h2 class="titulo-principal" id="titulo-principal">
+          Todos los productos
+        </h2>
+        <div id="contenedor-productos" class="contenedor-productos">
+          <!-- Esto se va a rellenar con JS -->
         </div>
-      </div>
-    </nav>
-    <main class="d-flex align-items-center justify-content-center">
-      <section
-        class="d-flex flex-column w-75 gap-4 justify-content-center align-items-center align-items-md-start"
-      >
-        <div>
-          <h2 class="text-center text-md-start">Tienda Deportiva</h2>
-          <p class="text-center">
-            Econtra las mejores ofertas en nuestra tienda online.
-          </p>
-        </div>
-        <button class="btn btn-success p-md-2 btn-responsive">Compra ahora!</button>
-      </section>
-    </main>
-    <section class="container">
-      <h2 class="text-center fs-1 mt-5 text-primary">
-        Explora nuestras categorias
-      </h2>
-      <div class="d-flex flex-column mt-4">
-        <form class="d-flex" role="search">
-          <input
-            class="form-control me-2 search-responsive"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-      <div class="mt-4 d-flex gap-4 flex-column flex-md-row">
-        <div class="card text-center">
-          <div class="card-header">Categoria Deportiva</div>
-          <div class="card-body">
-            <h5 class="card-title">Botines</h5>
-            <p class="card-text">
-              Elegi nuestra seccion de botines para correr más rapido.
-            </p>
-            <a href="#" class="btn btn-primary">Visitar</a>
-          </div>
-        </div>
+      </main>
+    </div>
 
-        <div class="card text-center">
-          <div class="card-header">Ropa para mujer</div>
-          <div class="card-body">
-            <h5 class="card-title">Calza deportiva</h5>
-            <p class="card-text">
-              Visita nuestra seccion de calzas para correr más rapido.
-            </p>
-            <a href="#" class="btn btn-primary">Visitar</a>
-          </div>
-        </div>
-
-        <div class="card text-center">
-          <div class="card-header">Ropa para hombre</div>
-          <div class="card-body">
-            <h5 class="card-title">Camisetas de futbol</h5>
-            <p class="card-text">Camisetas originales de tu equipo favorito.</p>
-            <a href="#" class="btn btn-primary">Visitar</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="mt-5 container">
-      <h2 class="fs-1 text-center mb-4">Nuestros Productos</h2>
-      <div class="d-flex justify-content-center flex-column flex-md-row align-items-center  gap-3 mb-5">
-        <div class="card" style="width: 18rem">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="bg-dark text-center text-white">
-      <div class="container p-4">
-        <section class="mb-4">
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="#!"
-            role="button"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="#!"
-            role="button"
-            ><i class="fab fa-twitter"></i
-          ></a>
-
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="#!"
-            role="button"
-            ><i class="fab fa-google"></i
-          ></a>
-
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="#!"
-            role="button"
-            ><i class="fab fa-instagram"></i
-          ></a>
-
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="#!"
-            role="button"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="#!"
-            role="button"
-            ><i class="fab fa-github"></i
-          ></a>
-        </section>
-
-        <section class="">
-          <form action="">
-            <div class="row d-flex justify-content-center">
-              <div class="col-auto">
-                <p class="pt-2">
-                  <strong>Sign up for our newsletter</strong>
-                </p>
-              </div>
-
-              <div class="col-md-5 col-12">
-                <div class="form-outline form-white mb-4">
-                  <input
-                    type="email"
-                    id="form5Example21"
-                    class="form-control"
-                  />
-                  <label class="form-label mt-3" for="form5Example21"
-                    >Email address</label
-                  >
-                </div>
-              </div>
-
-              <div class="col-auto">
-                <button type="submit" class="btn btn-outline-light mb-4">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </form>
-        </section>
-
-        <section class="mb-4">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            distinctio earum repellat quaerat voluptatibus placeat nam, commodi
-            optio pariatur est quia magnam eum harum corrupti dicta, aliquam
-            sequi voluptate quas.
-          </p>
-        </section>
-        <!-- Section: Text -->
-
-        <!-- Section: Links -->
-        <section class="">
-          <!--Grid row-->
-          <div class="row">
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
-
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#!" class="text-white">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 4</a>
-                </li>
-              </ul>
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
-
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#!" class="text-white">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 4</a>
-                </li>
-              </ul>
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
-
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#!" class="text-white">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 4</a>
-                </li>
-              </ul>
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
-
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#!" class="text-white">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 4</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/"
-          >MDBootstrap.com</a
-        >
-      </div>
-    </footer>
-    <script src="./assets/js/index.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
